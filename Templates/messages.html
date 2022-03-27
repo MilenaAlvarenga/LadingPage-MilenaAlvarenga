@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Landing Page HTML | AlexCG Design</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
+</head>
+<body>
+    <header class="hero">
+        <div class="textos-hero">
+            <h1>Welcome!</h1>
+            <p>Come and see your new messages!</p>
+
+            <div>
+                <table id="messages">
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre Completo</th>
+                        <th>Email</th>
+                        <th>Mensaje</th>
+                    </tr>
+                    {% for m in listamensajes %}
+                    <tr>
+                        <td>{{ m["id"] }}</td>
+                        <td>{{ m["fullname"] }}</td>
+                        <td>{{ m["email"] }}</td>
+                        <td>{{ m["message"] }}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+
+</body>
+</html>

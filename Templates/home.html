@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>VisitPeru</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
+</head>
+
+<body>
+    <header class="hero">
+        <div class="textos-hero">
+            <h1>Welcome!</h1>
+            <p>Come and explore the wonders of the great Peru!</p>
+            <a href="#contacto">Contact me</a>
+        </div>
+        <div class="svg-hero" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+                style="height: 100%; width: 100%;">
+                <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                    style="stroke: none; fill: #fff;"></path>
+            </svg></div>
+    </header>
+
+
+    <section class="wave-contenedor website">
+        <img src="{{ url_for('static', filename='./img/alpacap.jpg') }}" alt="">
+        <div class="contenedor-textos-main">
+            <h2 class="titulo left">Why you should visit Peru?</h2>
+            <p class="parrafo">Peru is a country rich in culture, biodiversity, gastronomy. Its incredible landscapes will surprise you!</p>
+            <a href="https://www.raptravel.org/noticias/viaje-al-peru-diez-razones-para-visitar-peru.php#.Yj33LufMLrc" class="cta">Learn more</a>
+        </div>
+    </section>
+
+    <section class="info">
+        <div class="contenedor">
+            <h2 class="titulo left">The cradle of the Inca Empire</h2>
+            <p>In 1933, Cusco, the Inca city, was declared the Archaeological Capital of South America; in 1978, Cultural Heritage of the World; and in 1993, Common Heritage of Humanity.
+                Likewise, Machu Picchu was declared a World Heritage Site by UNESCO in 1983 and in 2007 as one of the New Seven Wonders of the World.</p>
+        </div>
+    </section>
+
+    <section class="cards contenedor">
+        <h2 class="titulo">Statistics</h2>
+        <div class="content-cards">
+            <article class="card">
+                <i class="fa-solid fa-plane-arrival"></i>
+                <h3>Tourism</h3>
+                <p>According to Statista (2021), tourism has behaved as follows:</p>
+                <img src="img/grafico.png">
+                <a href="https://www.statista.com/statistics/888184/peru-number-visitors/#:~:text=The%20impact%20of%20the%20coronavirus,before%20that%20global%20health%20crisis." class="cta">Learn more</a>
+            </article>
+            <article class="card">
+                <i class="fa-solid fa-virus-covid"></i>
+                <h3>Covid</h3>
+                <p>According to Worldometer (2022), COVID cases behave like this:</p>
+                <img src = "img/estadisticas.png">
+                <a href="https://www.worldometers.info/coronavirus/country/peru/" class="cta">Learn more</a>
+            </article>
+        </div>
+    </section>
+
+    <section class="galeria">
+        <div class="contenedor">
+            <h2 class="titulo">Places to visit</h2>
+            <article class="galeria-cont">
+                <img src="img/laguna.JPG" alt="">
+                <img src="img/machu1.JPG" alt="">
+                <img src="img/taller.JPG" alt="">
+                <img src="img/montanac.JPG" alt="">
+                <img src="img/iglesia.JPG" alt="">
+                <img src="img/calle.JPG" alt="">
+            </article>
+        </div>
+    </section>
+
+    <section class="info-last">
+
+        <div class="contenedor last-section">
+            <div class="contenedor-textos-main">
+                <h2 class="titulo left">About me</h2>
+                <p class="parrafo">I am Milena Alvarenga, a Business Engineering student at ESEN. I am a lover of traveling and adventure, it will be a pleasure to guide you on your next trip.</p>
+                <p class="parrafo">If you want to know a little about my work on Git Hub, click below.</p>
+                <a href="https://github.com/MilenaAlvarenga" class="cta"><img src="img/GitHub-Logo.png" alt=""></a>
+            </div>
+            <img src="img/fotoperfil.jpg" alt="">
+        </div>
+        
+        <div class="svg-wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+            style="height: 100%; width: 100%;">
+            <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                style="stroke: none; fill: #f8ec7c;"></path>
+        </svg></div>
+    </section>
+
+    <footer id="contacto">
+        <div class="contenedor">
+            <h2 class="titulo">Contact me</h2>
+            <form action="{{ url_for('home.mensajenuevo') }}" method="post">
+                {{ form.hidden_tag() }}
+                {{ form.fullname.label}}
+                {{ form.fullname}}
+                {{ form.email.label}}
+                {{ form.email}}
+                {{ form.message.label}}
+                {{ form.message}}
+                <br>
+                {{ form.submit }}
+            </form>
+        </section>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/481c02a11e.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
