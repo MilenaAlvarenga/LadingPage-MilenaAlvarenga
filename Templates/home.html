@@ -49,14 +49,14 @@
                 <i class="fa-solid fa-plane-arrival"></i>
                 <h3>Tourism</h3>
                 <p>According to Statista (2021), tourism has behaved as follows:</p>
-                <img src="img/grafico.png">
+                <img src="{{ url_for('static', filename='./img/grafico.png') }}" alt="">
                 <a href="https://www.statista.com/statistics/888184/peru-number-visitors/#:~:text=The%20impact%20of%20the%20coronavirus,before%20that%20global%20health%20crisis." class="cta">Learn more</a>
             </article>
             <article class="card">
                 <i class="fa-solid fa-virus-covid"></i>
                 <h3>Covid</h3>
                 <p>According to Worldometer (2022), COVID cases behave like this:</p>
-                <img src = "img/estadisticas.png">
+                <img src="{{ url_for('static', filename='./img/estadisticas.png') }}" alt="">
                 <a href="https://www.worldometers.info/coronavirus/country/peru/" class="cta">Learn more</a>
             </article>
         </div>
@@ -66,12 +66,12 @@
         <div class="contenedor">
             <h2 class="titulo">Places to visit</h2>
             <article class="galeria-cont">
-                <img src="img/laguna.JPG" alt="">
-                <img src="img/machu1.JPG" alt="">
-                <img src="img/taller.JPG" alt="">
-                <img src="img/montanac.JPG" alt="">
-                <img src="img/iglesia.JPG" alt="">
-                <img src="img/calle.JPG" alt="">
+                <img src="{{ url_for('static', filename='./img/laguna.JPG') }}" alt="">
+                <img src="{{ url_for('static', filename='./img/machu1.JPG') }}" alt="">
+                <img src="{{ url_for('static', filename='./img/taller.JPG') }}" alt="">
+                <img src="{{ url_for('static', filename='./img/montanac.JPG') }}" alt="">
+                <img src="{{ url_for('static', filename='./img/iglesia.JPG') }}" alt="">
+                <img src="{{ url_for('static', filename='./img/calle.JPG') }}" alt="">
             </article>
         </div>
     </section>
@@ -83,9 +83,9 @@
                 <h2 class="titulo left">About me</h2>
                 <p class="parrafo">I am Milena Alvarenga, a Business Engineering student at ESEN. I am a lover of traveling and adventure, it will be a pleasure to guide you on your next trip.</p>
                 <p class="parrafo">If you want to know a little about my work on Git Hub, click below.</p>
-                <a href="https://github.com/MilenaAlvarenga" class="cta"><img src="img/GitHub-Logo.png" alt=""></a>
+                <a href="https://github.com/MilenaAlvarenga" class="cta"><img src="{{ url_for('static', filename='./img/GitHub-Logo.png') }}" alt=""></a>
             </div>
-            <img src="img/fotoperfil.jpg" alt="">
+            <img src="{{ url_for('static', filename='./img/fotoperfil.jpg') }}" alt="">
         </div>
         
         <div class="svg-wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
