@@ -216,12 +216,6 @@ footer{
     color: black;
 }
 
-.form{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
 /*table */
 
 table, th, td {
